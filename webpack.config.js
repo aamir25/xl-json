@@ -32,6 +32,14 @@ module.exports = {
         path: 'src',
         filename: 'js/bundle.min.js'
     },
+    node: {
+        fs: "empty"
+    },
+    externals: [
+        {
+            './cptable': 'var cptable'
+        }
+    ],
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin()
     ]
