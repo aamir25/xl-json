@@ -9,6 +9,8 @@ import promise from 'redux-promise';
 import createLogger from 'redux-logger';
 import * as firebase from 'firebase';
 
+import rootReducer from './reducers';
+
 import App from './components/App';
 import Upload from './components/Upload';
 import Table from './components/Table';
@@ -26,6 +28,7 @@ firebase.initializeApp(config);
 
 const logger = createLogger();
 const store = createStore(
+				rootReducer,
 				applyMiddleware(thunk, promise, logger)
 			);
 

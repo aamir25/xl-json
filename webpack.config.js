@@ -10,6 +10,12 @@ module.exports = {
     devtool: 'cheap-module-eval-source-map',
     entry: './dev/js/index.js',
     module: {
+        rules : [
+            {
+                test : /\.css$/,
+                use : [ 'style-loader', 'css-loader']
+            }
+        ],
         loaders: [
             {
                 test: /\.js$/,
@@ -17,7 +23,7 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.scss/,
+                test: /\.css$/,
                 loader: 'style-loader!css-loader!sass-loader'
             }
         ]

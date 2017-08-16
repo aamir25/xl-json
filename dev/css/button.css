@@ -1,0 +1,45 @@
+/*****************************************
+  upload button styles
+******************************************/
+.fileUpload {
+	position: relative;
+	display: inline-block;
+  text-align: center;
+}
+
+.fileUploadLabel {
+  display: block;
+  padding: 1em 2em;
+  color: #fff;
+  background: #222;
+  border-radius: 0.2em;
+  transition: background .3s;
+  font-size: 20px;
+  
+  &:hover {
+     cursor: pointer;
+     background: #000;
+  }
+}
+
+.fileUploadInput {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin : auto;
+    font-size: 1;
+    width:0;
+    height: 100%;
+    opacity: 0;
+}
+
+html {
+   font-family: 'helvetica neue', 'arial', sans-serif;
+   font-size: 24px;
+   font-weight: bold;
+   padding-top: 5em;
+   -webkit-font-smoothing: antialiased;
+   text-align: center;
+}
