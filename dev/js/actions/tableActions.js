@@ -13,5 +13,5 @@ export function getData(dbRef) {
 				});
 			console.log(error);
 		})
-	}
+	};
 } 

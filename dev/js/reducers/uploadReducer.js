@@ -1,22 +1,20 @@
 const initialState = {
-	data : [],
 	error : "",
 	isLoading : false
 };
 
 export default function(state = initialState, action) {
 	switch(action.type) {
-		case 'FETCH_DATA':
+		case 'START_UPLOAD':
 			return {
 				...state,
 				isLoading : true
 			};
 		break;
 
-		case 'DATA_FETCHED':
+		case 'UPLOAD_FINISH':
 			return {
 				...state,
-				data : action.payload,
 				isLoading : false
 			}
 		break;
@@ -24,10 +22,8 @@ export default function(state = initialState, action) {
 		case 'ERROR':
 			return {
 				...state,
-				error : action.payload,
-				isLoading : false
+				error : action.payload
 			}
 		break;
 	}
-	return state;
 }
